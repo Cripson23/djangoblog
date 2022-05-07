@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Добавление поста{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Добавление поста</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.date }}<br>
+            {{ form.image }}<br><br>
+            {% if error %}
+                <span>{{ error }}</span><br><br>
+            {% endif %}
+            <button class="btn btn-success" type="submit">Добавить пост</button>
+        </form>
+    </div>
+{% endblock %}

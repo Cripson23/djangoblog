@@ -1,0 +1,115 @@
+body {
+    background-color: #DADADA;
+    display: flex;
+}
+
+a {
+    text-decoration: none
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+aside {
+    background: #ffffff;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: black;
+    border-right: 5px solid #b3adad;
+    font-size: 25px;
+    overflow: hidden;
+    position: fixed
+}
+
+aside ul li a {
+    margin-bottom: 5%;
+    display: block;
+    margin-left: 22%;
+    color:black;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #2a57fa;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+#logo {
+    height: 30%;
+    margin-bottom: 10%;
+}
+
+main {
+    margin-left: 43%;
+}
+
+main .features {
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+}
+
+main .features h1 {font-size: 45px; margin-bottom: 30px}
+main .features p {max-width: 600px; margin: 20px auto}
+
+.post__container {
+    clear: both;
+    width: 600px;
+    margin: 30px;
+    text-align: left;
+    padding: 30px;
+    background: #F0F8FF;
+    border-radius: 15px;
+}
+
+.btn-info {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: -8%;
+}
+
+form {
+    width: 600px;
+    margin-top: 50px;
+}
+
+form span {
+    color: #ff726f;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.post__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post__date h4 {
+    font-size: 15px;
+}
+
+.post__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#delete_button {
+    margin-left: -20px;
+}
+
+.main__info {
+    font-size: 25px;
+}

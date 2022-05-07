@@ -1,0 +1,26 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Блог{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Что новенького?</h1>
+        {% if posts %}
+            {% for post in posts %}
+                <div class="post__container">
+                    <div class="post__header">
+                        <h3>{{ post.title }}</h3>
+                        <div class="post__date">
+                            <h4>{{ post.date|date:"D, d.m.Y H:i" }}</h4>
+                        </div>
+                    </div>
+                    <p>{{ post.anons }}</p>
+                    <img src="{{ post.image.url }}" alt="{{ post.image }}">
+                    <a href="{% url 'post-detail' post.id %}" class="btn btn-warning mt-4">Подробнее</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h3>Пока нет постов...</h3>
+        {% endif %}
+    </div>
+{% endblock %}
